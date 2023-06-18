@@ -23,6 +23,10 @@ jobs:
           cd inversion_count
           npm install
           npm run build
+      - name: Set Git user info
+        run: |
+          git config user.email "rafaelmedeirosnobre2001@gmail.com"
+          git config user.name "Rafael Nobre"
 
       - name: Deploy to GitHub Pages
         run: |
