@@ -26,5 +26,5 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          cd your-app-directory
+          cd inversion_count
           npx gh-pages -d build
