@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies and build
         run: |
-          cd your-app-directory
+          cd inversion_count
           npm install
           npm run build
 
