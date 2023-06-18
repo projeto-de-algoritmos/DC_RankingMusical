@@ -45,7 +45,7 @@ class Board extends Component {
       }
       return item;
     });
-    this.props.onStateChange(updatedPositions);
+    this.props.onStateChange(updatedPositions.sort((a, b) => a.pos - b.pos));
     this.setState({
       generosMusicais: updatedPositions
     });
