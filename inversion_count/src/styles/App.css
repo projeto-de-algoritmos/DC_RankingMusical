@@ -21,7 +21,8 @@ html {
 
 
 .large {
-	font-size: 4rem;
+	font-size: 3rem;
+	margin: 20px;
 }
 
 .rise {
@@ -52,4 +53,27 @@ html {
 	to {
 		text-shadow: 0 0.02em #fff, 0.02em 0 #fff, -0.02em 0 #fff, 0 -0.02em #fff;
 	}
+}
+
+.result{
+	font-size: 1.7em;
+	margin-top: 10px;
+	width: 500px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.inversionsNumber{
+	width: 200px;
+	height: 200px;
+	display: flex;
+	align-items: center;
+}
+
+.mrIncredible{
+	width: 200px;
+	height: 200px;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
