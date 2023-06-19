@@ -117,7 +117,6 @@ class App extends React.Component {
   render(){
     return (
       <div className="app">
-        <button onClick={()=> console.log(this.state)}>Teste</button>
         <h1 className='large rise'>Ranking de gêneros musicais!</h1>
         <Board onStateChange={this.handleMyStateChange}/>
         <Board onStateChange={this.handleYoursStateChange}/>
