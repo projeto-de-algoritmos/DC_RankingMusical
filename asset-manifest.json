@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/DC_RankingMusical/static/css/main.8757cdbb.css",
+    "main.css": "/DC_RankingMusical/static/css/main.b6766b5c.css",
     "main.js": "/DC_RankingMusical/static/js/main.b336e2fa.js",
     "static/media/rave.gif": "/DC_RankingMusical/static/media/rave.e194eebc443114848f54.gif",
     "static/media/pagode.gif": "/DC_RankingMusical/static/media/pagode.3b52ad43469caf859f5a.gif",
@@ -18,11 +18,11 @@
     "static/media/0.png": "/DC_RankingMusical/static/media/0.a494e6c27c111e7e1775.png",
     "static/media/2.png": "/DC_RankingMusical/static/media/2.cabc583e9b402cdbbfa0.png",
     "index.html": "/DC_RankingMusical/index.html",
-    "main.8757cdbb.css.map": "/DC_RankingMusical/static/css/main.8757cdbb.css.map",
+    "main.b6766b5c.css.map": "/DC_RankingMusical/static/css/main.b6766b5c.css.map",
     "main.b336e2fa.js.map": "/DC_RankingMusical/static/js/main.b336e2fa.js.map"
   },
   "entrypoints": [
-    "static/css/main.8757cdbb.css",
+    "static/css/main.b6766b5c.css",
     "static/js/main.b336e2fa.js"
   ]
 }
