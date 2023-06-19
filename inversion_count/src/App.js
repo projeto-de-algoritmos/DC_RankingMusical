@@ -8,55 +8,30 @@ import incredible2 from './mrIncredible/2.png'
 import incredible3 from './mrIncredible/3.png'
 import incredible4 from './mrIncredible/4.png'
 
-function sortAndCount(L) {
-  if (L.length <= 1) {
-    return 0;
-  }
-
-  const mid = Math.floor(L.length / 2);
-  const A = L.slice(0, mid);
-  const B = L.slice(mid);
-
-  const rA = sortAndCount(A);
-  const rB = sortAndCount(B);
-
-  const r = mergeAndCount(A, B);
-
-  return rA + rB + r;
-}
-
-function mergeAndCount(A, B) {
-  let i = 0;
-  let j = 0;
-  let inversions = 0;
-
-  while (i < A.length && j < B.length) {
-    if (A[i] <= B[j]) {
-      i++;
-    } else {
-      inversions += A.length - i;
-      j++;
-    }
-  }
-
-  return inversions;
-}
+import invCount from './alghoritms/invCount';
 
 function getMusicRank(myMusicRank, yourMusicRank) {
-  return Object.entries(yourMusicRank).map(([key, value]) => myMusicRank[key].pos);
+  const rank = []
+  for (let i = 0; i < 10; i++) {
+    let item = Object.values(yourMusicRank).find(item => item.pos === i)
+    let item2 = Object.values(myMusicRank).find(aux => aux.genero === item.genero)
+    rank.push(item2.pos)
+}
+  console.log(myMusicRank, yourMusicRank, rank)
+  return rank
 }
 
 function getCompatibilityScale(inversionCount) {
   if (inversionCount >= 0 && inversionCount <= 10) {
-    return 0; // Low Compatibility
+    return 0;
   } else if (inversionCount >= 11 && inversionCount <= 20) {
-    return 1; // Moderate Compatibility
+    return 1;
   } else if (inversionCount >= 21 && inversionCount <= 30) {
-    return 2; // Average Compatibility
+    return 2;
   } else if (inversionCount >= 31 && inversionCount <= 40) {
-    return 3; // High Compatibility
+    return 3;
   } else {
-    return 4; // Very High Compatibility
+    return 4;
   }
 }
 
@@ -95,7 +70,7 @@ class App extends React.Component {
   }
 
   handleMyStateChange = (newState) => {
-    let count  = sortAndCount(getMusicRank(newState, this.state.yourMusicRank))
+    let count  = invCount(getMusicRank(newState, this.state.yourMusicRank))
     this.setState({
       myMusicRank: newState
     })
@@ -104,7 +79,8 @@ class App extends React.Component {
     })
   };
   handleYoursStateChange = (newState) => {
-    let count  = sortAndCount(getMusicRank(this.state.yourMusicRank, newState))
+    console.log(newState)
+    let count  = invCount(getMusicRank(this.state.myMusicRank, newState))
     this.setState({
       yourMusicRank: newState
     })
