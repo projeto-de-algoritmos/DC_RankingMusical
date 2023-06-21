@@ -41,6 +41,8 @@ npm install
 
 ## Uso 
 
+O projeto pode ser acessado pelo [LINK](https://projeto-de-algoritmos.github.io/DC_RankingMusical/), ou pode ser executado localmente seguindo o passo a passo abaixo:
+
 Para executar o projeto, execute o código:
 
 ```
