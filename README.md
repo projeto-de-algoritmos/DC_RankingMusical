@@ -50,8 +50,3 @@ npm start
 E abra o endereço http://localhost:3000
 
 Na interface interativa, os gêneros são arrastáveis, e devem ser colocados na ordem de preferência dos usuário, enquanto é calculado o nível de compatibilidade entre os dois gostos.
-
-
-
-
-
